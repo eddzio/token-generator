@@ -32,22 +32,22 @@ export default function Playground() {
   return (
     <div className="flex flex-col h-screen">
       {/* Header */}
-      <header className="flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-white">
+      <header className="flex items-center justify-between px-4 py-3 border-b border-stone-200 bg-white">
         <div className="flex items-center gap-3">
-          <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-          <h1 className="text-sm font-medium tracking-wide uppercase text-gray-500">
+          <div className="w-2 h-2 bg-stone-400 rounded-full"></div>
+          <h1 className="text-sm font-medium tracking-wide uppercase text-stone-700">
             Token Generator
           </h1>
         </div>
 
         {/* Segment Control */}
-        <div className="flex items-center bg-gray-100 rounded p-0.5">
+        <div className="flex items-center bg-stone-100 rounded p-0.5">
           <button
             onClick={() => setViewMode("editor")}
             className={`px-3 py-1 text-xs font-medium tracking-wide uppercase rounded transition-colors ${
               viewMode === "editor"
-                ? "bg-white text-gray-700 shadow-sm"
-                : "text-gray-500 hover:text-gray-700"
+                ? "bg-white text-stone-800 shadow-sm"
+                : "text-stone-600 hover:text-stone-800"
             }`}
           >
             Editor
@@ -56,15 +56,15 @@ export default function Playground() {
             onClick={() => setViewMode("export")}
             className={`px-3 py-1 text-xs font-medium tracking-wide uppercase rounded transition-colors ${
               viewMode === "export"
-                ? "bg-white text-gray-700 shadow-sm"
-                : "text-gray-500 hover:text-gray-700"
+                ? "bg-white text-stone-800 shadow-sm"
+                : "text-stone-600 hover:text-stone-800"
             }`}
           >
             Export
           </button>
         </div>
 
-        <div className="text-xs text-gray-400 tracking-wider">
+        <div className="text-xs text-stone-800 tracking-wider">
           v4.0
         </div>
       </header>
@@ -73,7 +73,7 @@ export default function Playground() {
       {viewMode === "editor" ? (
         <div className="flex flex-1 min-h-0">
           {/* Left panel - Class Editor */}
-          <div className="w-1/2 border-r border-gray-200 flex flex-col min-w-0">
+          <div className="w-1/2 border-r border-stone-200 flex flex-col min-w-0">
             <ClassEditor rows={rows} onRowsChange={setRows} />
           </div>
 
@@ -85,7 +85,7 @@ export default function Playground() {
       ) : (
         <div className="flex flex-1 min-h-0">
           {/* Left panel - Export */}
-          <div className="w-1/2 border-r border-gray-200 flex flex-col min-w-0">
+          <div className="w-1/2 border-r border-stone-200 flex flex-col min-w-0">
             <ExportView elementClasses={elementClasses()} />
           </div>
 

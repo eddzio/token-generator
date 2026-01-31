@@ -65,10 +65,10 @@ export default function ClassRow({ row, onChange, onDelete }: ClassRowProps) {
     onChange({ ...row, value });
   };
 
-  const selectClasses = "px-2 py-1.5 text-xs bg-gray-50 border border-gray-200 rounded text-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-300 focus:border-gray-300 appearance-none cursor-pointer hover:bg-gray-100 transition-colors";
+  const selectClasses = "px-2 py-1.5 text-xs bg-stone-50 border border-stone-200 rounded text-stone-700 focus:outline-none focus:ring-1 focus:ring-stone-300 focus:border-stone-300 appearance-none cursor-pointer hover:bg-stone-100 transition-colors";
 
   return (
-    <div className="flex items-center gap-1.5 p-2 bg-gray-50 rounded border border-gray-200 hover:border-gray-300 transition-colors">
+    <div className="flex items-center gap-1.5 p-2 bg-stone-50 rounded border border-stone-200 hover:border-stone-300 transition-colors">
       {/* Target dropdown */}
       <select
         value={row.target}
@@ -83,7 +83,7 @@ export default function ClassRow({ row, onChange, onDelete }: ClassRowProps) {
       </select>
 
       {/* Separator */}
-      <span className="text-gray-300">/</span>
+      <span className="text-stone-400">/</span>
 
       {/* Category dropdown */}
       <select
@@ -101,7 +101,7 @@ export default function ClassRow({ row, onChange, onDelete }: ClassRowProps) {
       {/* Subcategory dropdown (only for colors) */}
       {subcategories && (
         <>
-          <span className="text-gray-300">/</span>
+          <span className="text-stone-400">/</span>
           <select
             value={row.subcategory || ""}
             onChange={(e) => handleSubcategoryChange(e.target.value)}
@@ -117,7 +117,7 @@ export default function ClassRow({ row, onChange, onDelete }: ClassRowProps) {
       )}
 
       {/* Arrow */}
-      <span className="text-gray-300 px-1">→</span>
+      <span className="text-stone-400 px-1">→</span>
 
       {/* Value dropdown - searchable */}
       <SearchableSelect
@@ -130,7 +130,7 @@ export default function ClassRow({ row, onChange, onDelete }: ClassRowProps) {
       {/* Delete button */}
       <button
         onClick={onDelete}
-        className="p-1.5 text-gray-300 hover:text-gray-500 hover:bg-gray-200 rounded transition-colors ml-1"
+        className="p-1.5 text-stone-400 hover:text-stone-600 hover:bg-stone-200 rounded transition-colors ml-1"
         aria-label="Delete row"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">

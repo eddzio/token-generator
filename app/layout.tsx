@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmMono.variable} font-mono antialiased bg-gray-50 text-gray-700`}>
+      <body className={`${dmMono.variable} font-mono antialiased bg-stone-50 text-stone-800`}>
         {children}
       </body>
     </html>

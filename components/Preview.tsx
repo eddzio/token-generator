@@ -19,10 +19,10 @@ export default function Preview({ elementClasses }: PreviewProps) {
   );
 
   return (
-    <div className="flex flex-col h-full bg-gray-50">
+    <div className="flex flex-col h-full bg-stone-50">
       {/* Panel header */}
-      <div className="px-4 py-3 border-b border-gray-200 bg-white">
-        <span className="text-xs font-medium tracking-wider uppercase text-gray-400">
+      <div className="px-4 py-3 border-b border-stone-200 bg-white">
+        <span className="text-xs font-medium tracking-wider uppercase text-stone-600">
           Preview
         </span>
       </div>
@@ -43,23 +43,23 @@ export default function Preview({ elementClasses }: PreviewProps) {
       </div>
 
       {/* Applied classes summary */}
-      <div className="px-4 py-3 border-t border-gray-200 bg-white">
+      <div className="px-4 py-3 border-t border-stone-200 bg-white">
         <details className="text-xs">
-          <summary className="cursor-pointer text-gray-400 hover:text-gray-600 font-medium tracking-wider uppercase select-none">
+          <summary className="cursor-pointer text-stone-600 hover:text-stone-800 font-medium tracking-wider uppercase select-none">
             Applied Classes {appliedTargets.length > 0 && `(${appliedTargets.length})`}
           </summary>
           <div className="mt-3 space-y-2 max-h-32 overflow-y-auto">
             {appliedTargets.length > 0 ? (
               appliedTargets.map(([target, classes]) => (
                 <div key={target} className="flex items-start gap-2">
-                  <span className="text-gray-400 shrink-0 w-20 capitalize">{target}:</span>
-                  <code className="text-gray-600 bg-gray-100 px-1.5 py-0.5 rounded text-xs break-all">
+                  <span className="text-stone-800 shrink-0 w-20 capitalize">{target}:</span>
+                  <code className="text-stone-700 bg-stone-100 px-1.5 py-0.5 rounded text-xs break-all">
                     {classes.join(" ")}
                   </code>
                 </div>
               ))
             ) : (
-              <div className="text-gray-400 italic">No classes applied</div>
+              <div className="text-stone-800 italic">No classes applied</div>
             )}
           </div>
         </details>
